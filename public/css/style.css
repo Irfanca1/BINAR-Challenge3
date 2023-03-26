@@ -1,0 +1,451 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: #F1F3FF;
+}
+
+.navbar-brand {
+    position: relative;
+    width: 100px;
+    height: 34px;
+    left: 136px;
+    top: 25px;
+    background-color: #0D28A6;
+}
+
+.item ul {
+    position: absolute;
+    right: 136px;
+    top: 26px;
+}
+
+.item ul>li {
+    color: #000 !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+    position: absolute;
+    height: 108px;
+    left: 136px;
+    top: 177px;
+}
+
+.home .sewa p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    color: #000;
+}
+
+.home .sewa p.binar-car,
+.home .sewa p.binar-lorem {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    line-height: 20px;
+    color: #000;
+}
+
+.home .sewa p.binar-lorem {
+    display: none;
+}
+
+.home img {
+    position: absolute;
+    width: 554px;
+    z-index: 1;
+    top: -30px;
+}
+
+.home button {
+    font-size: 14px;
+    float: left;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 225px;
+    background-color: #0D28A6;
+    top: 97px;
+    border-top-left-radius: 50px;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.content {
+    /* position: relative; */
+    top: 562px;
+    left: 53px;
+    margin-top: 35rem;
+}
+
+.content .binar-img img {
+    width: 450px;
+}
+
+.content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 24px !important;
+}
+
+.content p.sewa-mobil {
+    font-size: 14px;
+}
+
+.content ul li img {
+    width: 20px;
+}
+
+.content ul li {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.why-us {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10rem;
+}
+
+.why-us p.whyus {
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.why-us h2 {
+    font-weight: 700;
+    margin-left: 30px;
+    font-size: 24px;
+}
+
+.why-us .card-text {
+    font-size: 14px;
+}
+
+.why-us .card-title {
+    font-size: 16px;
+}
+
+.testimonial {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10rem;
+}
+
+.testimonial h2 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 36px;
+}
+
+.testimonial .review {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.testimonial .text-review {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card-testimonial {
+    width: 50em;
+    padding: 0 10em;
+    margin: 0 15em;
+    background-color: #F1F3FF;
+    font-size: 14px;
+}
+
+.testimonial .owl-next,
+.testimonial .owl-prev {
+    font-size: 35px !important;
+    border: 1.5px solid #b1afaf !important;
+    width: 50px !important;
+    border-radius: 100% !important;
+    margin: 30px 15px !important;
+}
+
+.testimonial .owl-prev:hover {
+    background-color: #ebebeb !important;
+    color: #000 !important;
+}
+
+.testimonial .owl-next:hover {
+    background-color: #65cc68 !important;
+    color: #fff !important;
+}
+
+.testimonial .owl-next {
+    background-color: #5CB85F !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.banner {
+    margin-top: 10rem;
+}
+
+.banner h1 {
+    font-size: 36px !important;
+    line-height: 150%;
+}
+
+.banner .card {
+    background-color: #0D28A6;
+    margin: 0 126px;
+}
+
+.banner .card-text {
+    margin-left: 25%;
+    font-size: 14px;
+}
+
+.asked {
+    margin-top: 10rem;
+}
+
+.asked h3 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 36px;
+}
+
+.asked p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+footer {
+    margin-top: 10rem;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-brand {
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+}
+
+.footer .Copyright {
+    margin-bottom: 10rem;
+}
+
+/* CARI MOBIL */
+.filter {
+    margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 12px;
+    font-family: 'rubik';
+}
+
+.filter select option {
+    padding: 10px;
+}
+
+.filter select option:hover {
+    background-color: #5CB85F;
+}
+
+.icon-form i {
+    position: relative;
+    left: -25px;
+    top: 5px;
+}
+
+.cari button {
+    margin-top: 30px;
+    background-color: #5CB85F;
+}
+
+@media only screen and (max-width: 577px) {
+    .navbar-brand {
+        left: 16px;
+        top: 24px;
+    }
+
+    .main {
+        height: 809px;
+    }
+
+    .home img {
+        top: 400px;
+        width: 358px;
+    }
+
+    .bg {
+        top: 497px;
+        height: 135px;
+    }
+
+    .home {
+        left: 0;
+    }
+
+    .navbar-brand {
+        left: 16px;
+    }
+
+    .item ul {
+        display: none;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        display: inline;
+        top: 24px;
+        border: none;
+    }
+
+    .home .sewa p.binar-lorem {
+        display: block;
+    }
+
+    .home .sewa p.binar-car {
+        display: none;
+    }
+
+    .home .sewa p {
+        position: relative;
+        top: -50px;
+    }
+
+    .home img {
+        margin-left: 13px;
+    }
+
+    .content {
+        margin-left: 2rem;
+    }
+
+    .content .binar-img img {
+        position: relative;
+        width: 250px;
+        top: 17rem;
+    }
+
+    .content .binar-sewa-mobil {
+        position: relative;
+        top: 20rem;
+        left: -38px;
+        padding: 1rem;
+    }
+
+    .why-us {
+        margin-top: 25rem;
+    }
+
+    .why-us h2,
+    .why-us .whyus {
+        text-align: center;
+    }
+
+    .why-us .card {
+        width: 95% !important;
+        position: relative;
+        left: -20px;
+    }
+
+    .testimonial {
+        position: relative;
+        top: -5rem;
+    }
+
+    .testimonial h2 {
+        text-align: center;
+    }
+
+    .card-testimonial {
+        width: 92%;
+        padding: 0;
+        margin: 0 1em;
+        height: 30em;
+    }
+
+    .card-testimonial img.author-img {
+        position: relative;
+        top: -8rem;
+        left: 190%;
+    }
+
+    .card-testimonial img.rate-img {
+        position: relative;
+        top: 7rem;
+        left: 15%;
+    }
+
+    .card-testimonial .text-review {
+        position: relative;
+        left: -6rem;
+        top: 10rem;
+        width: 140%;
+    }
+
+    .card-testimonial .author {
+        position: relative;
+        left: -6rem;
+        top: 10rem;
+        width: 90%;
+    }
+
+    .banner {
+        position: relative;
+        top: -10rem;
+    }
+
+    .banner h1 {
+        font-size: 24px !important;
+    }
+
+    .banner .card {
+        margin: 0 20px;
+        font-size: 14px;
+    }
+
+    .banner .card-text {
+        margin-left: 2% !important;
+    }
+
+    .asked-coloumn-1 {
+        position: relative;
+        top: -12rem;
+        text-align: center;
+    }
+
+    .asked-coloumn-1 h3 {
+        font-size: 24px !important;
+        margin-bottom: 36px;
+    }
+
+    .asked-coloumn-1 span {
+        display: none !important;
+    }
+
+    .asked-accordion {
+        position: relative;
+        top: -10rem;
+    }
+
+    footer {
+        left: -20px;
+        position: relative;
+        top: -18rem;
+    }
+}
