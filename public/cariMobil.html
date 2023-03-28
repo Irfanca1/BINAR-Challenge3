@@ -105,41 +105,44 @@
         </section>
 
         <!-- FILTER -->
-        <div class="card w-80 filter">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-3">
-                        <label for="driver" class="mb-3">Tipe Driver</label>
-                        <select class="driver form-select fs-6" aria-label="Default select example">
-                            <option value="">Pilih Tipe Driver</option>
-                            <option value="denganSopir">Dengan Sopir</option>
-                            <option value="tanpaSopir">Tanpa Sopir (Lepas Kunci)</option>
-                        </select>
-                    </div>
-                    <div class="col-2">
-                        <label for="tanggal" class="mb-3 d-block">Tanggal</label>
-                        <input type="date" class="form-control" name="date" id="date">
-                    </div>
-                    <div class="col-2">
-                        <label for="waktu" class="mb-3 d-block">Waktu Jemput/Ambil</label>
-                        <input type="time" class="form-control" name="time" id="time">
-                    </div>
-                    <div class="col-3">
-                        <label for="Penumpang" class="mb-3 d-block">Jumlah Penumpang (optional)</label>
-                        <div class="icon-form d-flex">
-                            <input type="text" class="form-control" name="Penumpang" id="Penumpang"
-                                placeholder="Jumlah Penumpang">
-                            <i class='bi bi-people-fill fs-5'></i>
+        <form action="/filterAvailable" method="get" id="filter-form">
+            <div class="card w-80 filter">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="driver" class="mb-3">Tipe Driver</label>
+                            <select class="driver form-select fs-6" id="available" aria-label="Default select example"
+                                name="available">
+                                <option value="">Pilih Tipe Driver</option>
+                                <option value="true">Dengan Sopir</option>
+                                <option value="false">Tanpa Sopir (Lepas Kunci)</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <label for="tanggal" class="mb-3 d-block">Tanggal</label>
+                            <input type="date" class="form-control" name="date" id="date">
+                        </div>
+                        <div class="col-2">
+                            <label for="waktu" class="mb-3 d-block">Waktu Jemput/Ambil</label>
+                            <input type="time" class="form-control" name="time" id="time">
+                        </div>
+                        <div class="col-3">
+                            <label for="penumpang" class="mb-3 d-block">Jumlah Penumpang (optional)</label>
+                            <div class="icon-form d-flex">
+                                <input type="text" class="form-control" name="penumpang" id="penumpang"
+                                    placeholder="Jumlah penumpang">
+                                <i class='bi bi-people-fill fs-5'></i>
+                            </div>
+                        </div>
+                        <div class="col-2 cari">
+                            <button class="btn btn-success" id="cari" type="submit">Edit</button>
                         </div>
                     </div>
-                    <div class="col-2 cari">
-                        <button class="btn btn-success">Cari Mobil</button>
-                    </div>
                 </div>
-
-
             </div>
-        </div>
+        </form>
+        <br>
+        <div id="result"></div>
 
         <!-- FOOTER -->
         <footer>
@@ -197,25 +200,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 500,
-            nav: true,
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 2
-                }
-            }
-        })
-    </script>
+
 </body>
 
 </html>

@@ -41,12 +41,17 @@ class Car {
 
   render() {
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
-    `;
+    <div class="container bg-dark">
+      <img src="/image/${this.image}" alt="${this.manufacture}" width="200px">
+      <p>${this.type}</p>
+      <p><b>Rp. ${this.rentPerDay} / hari</b></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>${this.capacity}</p>
+      <p>${this.transmission}</p>
+      <p>Tahun ${this.year}</p>
+    </div>
+      `;
   }
 }
+
+module.exports = Car
