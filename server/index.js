@@ -26,23 +26,29 @@ app.get("/cars", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIRECTORY, 'cariMobil.html'))
 })
 
+app.post("/penumpang"), express.urlencoded({ extended: false }), (req, res) => {
+    const inputPenumpang = req.body.penumpang
+    res.send(`INPUTAN YANG DITERIMA: ${inputPenumpang}`)
+}
+
 app.get("/filterAvailable", (req, res) => {
     const { available } = req.query
     const { date } = req.query
     const { time } = req.query
-    const penumpang = req.body.penumpang
+    const penumpang = req.query.penumpang
+
+    console.log(penumpang)
 
     const filteredCars = cars.filter(car => {
         const dateValue = new Date(date)
         const year = dateValue.getFullYear()
 
-        console.log(penumpang)
         if (available === 'all') {
             return true
         } else if (available == 'true') {
-            return car.available == true && car.year == year
+            return car.available == true && car.year == year && car.capacity >= penumpang
         } else if (available == 'false') {
-            return car.available == false && car.year == year
+            return car.available == false && car.year == year && car.capacity >= penumpang
         }
 
         // return car.available === available
