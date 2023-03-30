@@ -105,7 +105,7 @@
         </section>
 
         <!-- FILTER -->
-        <form action="/filterAvailable" method="get" id="filter-form">
+        <form id="filter-form">
             <div class="card w-80 filter">
                 <div class="card-body">
                     <div class="row">
@@ -124,7 +124,14 @@
                         </div>
                         <div class="col-2">
                             <label for="waktu" class="mb-3 d-block">Waktu Jemput/Ambil</label>
-                            <input type="time" class="form-control" name="time" id="time">
+                            <select class="form-select" name="time" id="time">
+                                <option value="">Pilih Waktu</option>
+                                <option value="">08.00 <span class="ms-5">WIB</span></option>
+                                <option value="">09.00 <span class="ms-5">WIB</span></option>
+                                <option value="">10.00 <span class="ms-5">WIB</span></option>
+                                <option value="">11.00 <span class="ms-5">WIB</span></option>
+                                <option value="">12.00 <span class="ms-5">WIB</span></option>
+                            </select>
                         </div>
                         <div class="col-3">
                             <label for="penumpang" class="mb-3 d-block">Jumlah Penumpang (optional)</label>
@@ -188,6 +195,25 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const filterForm = document.getElementById('filter-form')
+        const result = document.getElementById('result')
+
+        filterForm.addEventListener('submit', async e => {
+            e.preventDefault()
+            const formData = new FormData(filterForm)
+            const available = formData.get('available')
+            const date = formData.get('date')
+            const time = formData.get('time')
+            const penumpang = formData.get('penumpang')
+
+            const res = await fetch(`/filterAvailable?available=${available}&&date=${date}&&time=${time}&&penumpang=${penumpang}`)
+            const data = await res.text()
+
+            result.innerHTML = data
+        })
+    </script>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

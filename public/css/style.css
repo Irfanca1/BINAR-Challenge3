@@ -275,6 +275,10 @@ footer {
     background-color: #5CB85F;
 }
 
+select option:hover {
+    background-color: #65cc68;
+}
+
 @media only screen and (max-width: 577px) {
     .navbar-brand {
         left: 16px;

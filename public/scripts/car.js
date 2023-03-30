@@ -41,15 +41,24 @@ class Car {
 
   render() {
     return `
-    <div class="container bg-dark">
-      <img src="/image/${this.image}" alt="${this.manufacture}" width="200px">
-      <p>${this.type}</p>
-      <p><b>Rp. ${this.rentPerDay} / hari</b></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p>${this.capacity}</p>
-      <p>${this.transmission}</p>
-      <p>Tahun ${this.year}</p>
-    </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+            <div class="card m-4 d-flex" style="width: 320px;">
+              <img src="/image/${this.image}" class="card-img-top" width="200px" alt="${this.manufacture}">
+              <div class="card-body">
+                <p class="card-text">${this.type}</p>
+                <h5 class="card-title">Rp. ${this.rentPerDay} / hari</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="card-text"><i class="bi bi-people me-3"></i>${this.capacity} Orang</p>
+                <p class="card-text"><i class="bi bi-gear me-3"></i>${this.transmission}</p>
+                <p class="card-text"><i class="bi bi-calendar me-3"></i>Tahun ${this.year}</p>
+                <a href="" class="btn btn-success w-100">Pilih Mobil</a>
+              </div>
+            </div>
+          </div>
+          </div>  
+        </div>
       `;
   }
 }
